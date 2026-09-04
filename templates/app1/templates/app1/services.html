@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+</head>
+<body>
+    <h1>Our Services</h1>
+    <ul style="list-style-type: none; padding: 0; border: 2px solid rgb(227, 138, 138); width: 300px; padding: 10px; background-color: lightgray;">
+       {% for service in services %}
+       <li style="color:aquamarine">{{service.name}}</li>
+       {%empty%}
+         <li style="color:red">No services available at the moment.</li>
+       {%endfor%} 
+    </ul>
+</body>
+</html>
