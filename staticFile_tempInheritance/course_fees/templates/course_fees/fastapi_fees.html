@@ -1,0 +1,15 @@
+{%extends 'course/Base.html'%}
+
+{%load static%}
+
+
+{%block title%}fastapi fees Page{% endblock title%}
+
+{% block corecss %}
+{{ block.super }}
+<link rel="stylesheet" href="{%static 'course_fees/css/style.css'%}">
+{% endblock corecss%}
+
+{%block content%}
+    <h1>Welcome to fastapi fee structure page</h1>
+{%endblock content%}

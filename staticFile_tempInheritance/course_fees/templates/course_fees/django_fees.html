@@ -1,0 +1,14 @@
+{%extends 'course/Base.html'%}
+
+{% load static %}
+
+{%block title%}Django fees Page{% endblock title%}
+
+{% block corecss %}
+{{ block.super }}
+<link rel="stylesheet" href="{%static 'course_fees/css/style.css'%}">
+{% endblock corecss%}
+
+{%block content%}
+    <h1>Welcome to Django fee structure page</h1>
+{%endblock content%}
