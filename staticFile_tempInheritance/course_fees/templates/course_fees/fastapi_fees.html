@@ -7,9 +7,31 @@
 
 {% block corecss %}
 {{ block.super }}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <link rel="stylesheet" href="{%static 'course_fees/css/style.css'%}">
 {% endblock corecss%}
 
 {%block content%}
-    <h1>Welcome to fastapi fee structure page</h1>
+    <h1>Welcome to fastapi fee structure page</h1><div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Fees breakdown</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Per Month charge</h6>
+            <p class="card-text">
+                <b>
+                Total amount - Rs 1300/Month<br>
+                Instructor charge - Rs 1000<br>
+                Platform charge - Rs 200<br>
+                others - Rs 100
+                </b>
+            </p>
+            <a href="#" class="card-link">check out the price </a>
+            <a href="#" class="card-link">others</a>
+        </div>
+    </div>
+
 {%endblock content%}
+
+{% block corejs %}
+{{ block.super }}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYjWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+{% endblock corejs %}
