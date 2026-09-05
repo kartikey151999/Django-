@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section id="home" class="home-section">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>This is a brief introduction about myself and my work.</p>
+        </div>
+    </section>
+
+    <section id="project" class="project-section">
+        <div class="container">
+            <h2>My Projects</h2>
+            <p>Here are some of the projects I've worked on.</p>
+            <ul>
+                <li>chatbot Application - <i>A conversational AI assistant </i><b>Python, Flask</b></li>
+                <li>Ecommerce Website - <i>An online store for selling products</i> <b>JavaScript, React</b></li>
+                <li>Task Management App - <i>A tool for organizing and tracking tasks </i><b>Python, Django</b></li>
+            </ul>
+        </div>
+    </section>
+
+{% endblock %}

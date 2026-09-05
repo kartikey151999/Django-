@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Message</title>
+    <style>
+        .debug{
+            color:blue;
+        }
+        .info{
+            color:rgb(204, 214, 204);
+        }
+        .success{
+            color:green;
+        }
+        .warning{
+            color:orange;
+        }
+        .error{
+            color:red;
+        }   
+    
+    </style>
+</head>
+<body>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li class="{{message.tags}}"> {{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>

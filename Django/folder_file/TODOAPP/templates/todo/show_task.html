@@ -1,0 +1,59 @@
+{% extends 'todo/Base.html' %}
+{% block title %}
+    <title>Show Task</title>
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Task List</h1>
+    {% if task %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Done</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mytask in task %}
+                    <tr>
+                        <td>{{ mytask.title }}</td>
+                        <td>{{ mytask.description }}</td>
+                        <td>
+                            {% if mytask.done %}
+                                <span class="badge bg-success">Done</span>
+                            {% else %}
+                                <span class="badge bg-warning text-dark">Pending</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {{mytask.created_at|date:"Y-m-d H:i"}} <br>
+                        </td>
+                        <td>
+                                <button type="submit" class="btn btn-sm {% if mytask.done %}btn-secondary{% else %}btn-success{% endif %}">
+                                    {% if mytask.done %}
+                                        Mark as Undone
+                                    {% else %}
+                                        Mark as Done
+                                    {% endif %}
+                                </button>
+            
+
+                        </td>
+
+                        <td>
+                            <a href="{% url 'edit_task' mytask.id %}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="{% url 'delete_task' mytask.id %}" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                        <td>
+                
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No tasks available. Please add a new task.</p>
+    {% endif %}
+{% endblock %}

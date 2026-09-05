@@ -1,0 +1,19 @@
+body{
+    background-color:rgb(79, 82, 82);
+    margin: 3px;
+    padding: 5px;
+    border:3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+ul li {
+    background-color: black;
+    list-style-type: none;
+    font-size: large;
+}
+a{
+    color: white;
+
+}

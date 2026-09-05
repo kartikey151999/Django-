@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Basic</title>
+</head>
+<body>
+    <h1>Template Basic</h1>
+    {% comment %}
+    This is a simple multiline comment
+    in the template.
+    {% endcomment %}
+
+    {# This is a single-line comment in the template #}
+    <p>Name: {{ name }}</p>
+    <p>Age: {{ age }}</p>
+    <p>fruits:{{fruits.0}}</p>
+    <p>User:{{user.age}}</p>
+    <p>Address_city:{{address.city}}</p>
+    <p> Fruits:{{fruits|safe}}</p>
+</body>
+</html>
+`

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Create Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'PostCreateView' %}"><button type="submit" class="btn btn-primary">Create</button></a>
+        <a href="{% url 'PostListView' %}" class="btn btn-secondary">Back to Listview</a>
+    </form>
+{% endblock %}
