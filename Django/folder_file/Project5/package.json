@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "dev":"tailwindcss -i ./blog/static/css/style.css -o ./blog/static/css/output.css --watch"
-  },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.2.4",
-    "tailwindcss": "^4.2.4"
-  }
-}
