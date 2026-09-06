@@ -9,12 +9,7 @@
     {% block corecss %}<link rel="stylesheet" href="{% static 'course/css/style.css'%}">{% endblock corecss %}
 </head>
 <body>
-    <div>
-            <span>Home</span>
-            <span>Courses</span>
-            <span>Fees</span>
-            
-    </div>
+    {% include 'course/components/nav.html'%}
     {% block content%}{% endblock content%}
     {% block footer %} This is footer content{% endblock footer %}
     {% block corejs %}{% endblock corejs %}
